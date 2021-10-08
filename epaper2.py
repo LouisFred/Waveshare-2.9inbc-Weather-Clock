@@ -35,7 +35,7 @@ FONTWEATHERBIG = os.path.join(picdir,'meteocons-webfont.ttf')
 #BOUNCETIME = 500
 
 
-owm = pyowm.OWM('abb59b67e8d14bf5559688293f257d4b')
+owm = pyowm.OWM('abb*******b')
 city_id = 2110683 #Tsukuba City
 weather_icon_dict = {200 : "6", 201 : "6", 202 : "6", 210 : "6", 211 : "6", 212 : "6", 
                      221 : "6", 230 : "6" , 231 : "6", 232 : "6", 
