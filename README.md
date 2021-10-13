@@ -6,3 +6,9 @@ BCM2935 and PyOWN package are necessary.
 
 Caution:fresh screen too frequent may cause screen burn up or other bad sequence.
 
+Update:
+Add Japan earthquake report function. 
+You can change the link's ending "?limit=X" to costumize number of list.
+Check epaper3.py
+
+
