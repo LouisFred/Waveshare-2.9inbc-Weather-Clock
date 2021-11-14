@@ -48,7 +48,7 @@ FONTJP = os.path.join(picdir,'Nsimsun.ttf')
 
 
 
-owm = pyowm.OWM('abb59b67e8d14bf5559688293f257d4b')
+owm = pyowm.OWM('#your api key')
 city_id = 2110683 #Tsukuba City
 weather_icon_dict = {200 : "6", 201 : "6", 202 : "6", 210 : "6", 211 : "6", 212 : "6", 
                      221 : "6", 230 : "6" , 231 : "6", 232 : "6", 
@@ -141,8 +141,8 @@ class Display:
         for data in dict_earthquake_data:
             if(data["code"] == 551):
                 indexe = dict_earthquake_data.index(data)
-                #print(dict_earthquake_data.index(data)) 
-                #print(dict_earthquake_data[dict_earthquake_data.index(data)])
+                print(dict_earthquake_data.index(data)) 
+                print(dict_earthquake_data[dict_earthquake_data.index(data)])
                 t1 = dict_earthquake_data[dict_earthquake_data.index(data)]
                 t2 = t1.get('earthquake')
                 time = t1.get('time')
@@ -169,7 +169,7 @@ class Display:
                 draw1.line((5,31+(indexe+1)*27, 270, 31+(indexe+1)*27), fill = 0)
 
         
-        self.epd.display(self.epd.getbuffer(Limage))
+        self.epd.display(self.epd.getbuffer(Limage),self.epd.getbuffer(Bimage))
         logging.info("Earthquake Updated")   
 
 
